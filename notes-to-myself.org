@@ -1,0 +1,520 @@
+#+drawers: code log
+* installation
+  This is what happened when I ran setup.sh.
+  :log:
+ejk$ sudo ./setup.sh
+
+Installing WebIOPi...
+
+Updating apt package list...
+Get:1 http://security.ubuntu.com/ubuntu artful-security InRelease [76.7 kB]
+Hit:2 http://us.archive.ubuntu.com/ubuntu artful InRelease
+Get:3 http://us.archive.ubuntu.com/ubuntu artful-updates InRelease [78.6 kB]
+Ign:4 http://cran.case.edu/bin/linux/ubuntu artful/ InRelease
+Get:5 http://cran.case.edu/bin/linux/ubuntu artful/ Release [3,065 B]
+Get:6 http://cran.case.edu/bin/linux/ubuntu artful/ Release.gpg [473 B]
+Get:7 http://security.ubuntu.com/ubuntu artful-security/main i386 DEP-11 Metadata [204 B]
+Get:8 http://us.archive.ubuntu.com/ubuntu artful-updates/main i386 DEP-11 Metadata [14.3 kB]
+Get:9 http://security.ubuntu.com/ubuntu artful-security/universe i386 DEP-11 Metadata [2,184 B]
+Get:10 http://us.archive.ubuntu.com/ubuntu artful-updates/universe i386 DEP-11 Metadata [5,088 B]
+Fetched 181 kB in 1s (159 kB/s)
+Reading package lists... Done
+
+Found Python 2.7.14... 
+Trying to install python-dev using apt-get
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python-dev is already the newest version (2.7.14-2ubuntu1).
+python-setuptools is already the newest version (36.2.7-2).
+python-setuptools set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Trying to install WebIOPi for Python 2.7.14
+running install
+running bdist_egg
+running egg_info
+creating WebIOPi.egg-info
+writing pbr to WebIOPi.egg-info/pbr.json
+writing WebIOPi.egg-info/PKG-INFO
+writing top-level names to WebIOPi.egg-info/top_level.txt
+writing dependency_links to WebIOPi.egg-info/dependency_links.txt
+writing manifest file 'WebIOPi.egg-info/SOURCES.txt'
+reading manifest file 'WebIOPi.egg-info/SOURCES.txt'
+writing manifest file 'WebIOPi.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-i686/egg
+running install_lib
+running build_py
+creating build
+creating build/lib.linux-i686-2.7
+creating build/lib.linux-i686-2.7/webiopi
+copying webiopi/__main__.py -> build/lib.linux-i686-2.7/webiopi
+copying webiopi/__init__.py -> build/lib.linux-i686-2.7/webiopi
+creating build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/version.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/thread.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/types.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/logger.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/crypto.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/config.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/loader.py -> build/lib.linux-i686-2.7/webiopi/utils
+copying webiopi/utils/__init__.py -> build/lib.linux-i686-2.7/webiopi/utils
+creating build/lib.linux-i686-2.7/webiopi/clients
+copying webiopi/clients/__init__.py -> build/lib.linux-i686-2.7/webiopi/clients
+creating build/lib.linux-i686-2.7/webiopi/protocols
+copying webiopi/protocols/rest.py -> build/lib.linux-i686-2.7/webiopi/protocols
+copying webiopi/protocols/http.py -> build/lib.linux-i686-2.7/webiopi/protocols
+copying webiopi/protocols/coap.py -> build/lib.linux-i686-2.7/webiopi/protocols
+copying webiopi/protocols/__init__.py -> build/lib.linux-i686-2.7/webiopi/protocols
+creating build/lib.linux-i686-2.7/webiopi/server
+copying webiopi/server/__init__.py -> build/lib.linux-i686-2.7/webiopi/server
+creating build/lib.linux-i686-2.7/webiopi/decorators
+copying webiopi/decorators/rest.py -> build/lib.linux-i686-2.7/webiopi/decorators
+copying webiopi/decorators/__init__.py -> build/lib.linux-i686-2.7/webiopi/decorators
+creating build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/bus.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/serial.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/onewire.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/spi.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/manager.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/instance.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/i2c.py -> build/lib.linux-i686-2.7/webiopi/devices
+copying webiopi/devices/__init__.py -> build/lib.linux-i686-2.7/webiopi/devices
+creating build/lib.linux-i686-2.7/webiopi/devices/digital
+copying webiopi/devices/digital/pcf8574.py -> build/lib.linux-i686-2.7/webiopi/devices/digital
+copying webiopi/devices/digital/ds2408.py -> build/lib.linux-i686-2.7/webiopi/devices/digital
+copying webiopi/devices/digital/mcp23XXX.py -> build/lib.linux-i686-2.7/webiopi/devices/digital
+copying webiopi/devices/digital/gpio.py -> build/lib.linux-i686-2.7/webiopi/devices/digital
+copying webiopi/devices/digital/__init__.py -> build/lib.linux-i686-2.7/webiopi/devices/digital
+creating build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/pcf8591.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/pca9685.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/mcp492X.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/mcp4725.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/mcp48XX.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/mcp3x0x.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/__init__.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+copying webiopi/devices/analog/ads1x1x.py -> build/lib.linux-i686-2.7/webiopi/devices/analog
+creating build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/tslXXXX.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/onewiretemp.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/hytXXX.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/tmpXXX.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/bmp085.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/vcnl4000.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+copying webiopi/devices/sensor/__init__.py -> build/lib.linux-i686-2.7/webiopi/devices/sensor
+creating build/lib.linux-i686-2.7/webiopi/devices/shield
+copying webiopi/devices/shield/piface.py -> build/lib.linux-i686-2.7/webiopi/devices/shield
+copying webiopi/devices/shield/__init__.py -> build/lib.linux-i686-2.7/webiopi/devices/shield
+running build_ext
+building '_webiopi.GPIO' extension
+creating build/temp.linux-i686-2.7
+creating build/temp.linux-i686-2.7/native
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-0oZe77/python2.7-2.7.14=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/usr/include/python2.7 -c native/bridge.c -o build/temp.linux-i686-2.7/native/bridge.o
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-0oZe77/python2.7-2.7.14=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/usr/include/python2.7 -c native/gpio.c -o build/temp.linux-i686-2.7/native/gpio.o
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-0oZe77/python2.7-2.7.14=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/usr/include/python2.7 -c native/cpuinfo.c -o build/temp.linux-i686-2.7/native/cpuinfo.o
+native/cpuinfo.c: In function ‘get_cpuinfo_revision’:
+native/cpuinfo.c:38:7: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+       fgets(buffer, sizeof(buffer) , fp);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+creating build/lib.linux-i686-2.7/_webiopi
+i686-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-0oZe77/python2.7-2.7.14=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z,relro -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-0oZe77/python2.7-2.7.14=. -fstack-protector-strong -Wformat -Werror=format-security build/temp.linux-i686-2.7/native/bridge.o build/temp.linux-i686-2.7/native/gpio.o build/temp.linux-i686-2.7/native/cpuinfo.o -o build/lib.linux-i686-2.7/_webiopi/GPIO.so
+creating build/bdist.linux-i686
+creating build/bdist.linux-i686/egg
+creating build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-2.7/webiopi/protocols/rest.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-2.7/webiopi/protocols/http.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-2.7/webiopi/protocols/coap.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-2.7/webiopi/protocols/__init__.py -> build/bdist.linux-i686/egg/webiopi/protocols
+creating build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-2.7/webiopi/devices/bus.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/pcf8591.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/pca9685.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/mcp492X.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/mcp4725.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/mcp48XX.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/mcp3x0x.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/analog/ads1x1x.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-2.7/webiopi/devices/serial.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-2.7/webiopi/devices/onewire.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-2.7/webiopi/devices/spi.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-2.7/webiopi/devices/manager.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/tslXXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/onewiretemp.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/hytXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/tmpXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/bmp085.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/vcnl4000.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/sensor/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-2.7/webiopi/devices/instance.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/digital/pcf8574.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/digital/ds2408.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/digital/mcp23XXX.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/digital/gpio.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/digital/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-2.7/webiopi/devices/i2c.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-2.7/webiopi/devices/shield/piface.py -> build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-2.7/webiopi/devices/shield/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-2.7/webiopi/devices/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-2.7/webiopi/__main__.py -> build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/webiopi/clients
+copying build/lib.linux-i686-2.7/webiopi/clients/__init__.py -> build/bdist.linux-i686/egg/webiopi/clients
+creating build/bdist.linux-i686/egg/webiopi/decorators
+copying build/lib.linux-i686-2.7/webiopi/decorators/rest.py -> build/bdist.linux-i686/egg/webiopi/decorators
+copying build/lib.linux-i686-2.7/webiopi/decorators/__init__.py -> build/bdist.linux-i686/egg/webiopi/decorators
+creating build/bdist.linux-i686/egg/webiopi/server
+copying build/lib.linux-i686-2.7/webiopi/server/__init__.py -> build/bdist.linux-i686/egg/webiopi/server
+creating build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/version.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/thread.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/types.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/logger.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/crypto.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/config.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/loader.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/utils/__init__.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-2.7/webiopi/__init__.py -> build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/_webiopi
+copying build/lib.linux-i686-2.7/_webiopi/GPIO.so -> build/bdist.linux-i686/egg/_webiopi
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/rest.py to rest.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/http.py to http.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/coap.py to coap.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/bus.py to bus.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/pcf8591.py to pcf8591.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/pca9685.py to pca9685.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp492X.py to mcp492X.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp4725.py to mcp4725.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp48XX.py to mcp48XX.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp3x0x.py to mcp3x0x.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/ads1x1x.py to ads1x1x.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/serial.py to serial.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/onewire.py to onewire.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/spi.py to spi.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/manager.py to manager.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/tslXXXX.py to tslXXXX.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/onewiretemp.py to onewiretemp.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/hytXXX.py to hytXXX.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/tmpXXX.py to tmpXXX.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/bmp085.py to bmp085.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/vcnl4000.py to vcnl4000.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/instance.py to instance.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/pcf8574.py to pcf8574.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/ds2408.py to ds2408.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/mcp23XXX.py to mcp23XXX.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/gpio.py to gpio.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/i2c.py to i2c.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/shield/piface.py to piface.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/shield/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/__main__.py to __main__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/clients/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/decorators/rest.py to rest.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/decorators/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/server/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/version.py to version.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/thread.py to thread.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/types.py to types.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/logger.py to logger.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/crypto.py to crypto.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/config.py to config.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/loader.py to loader.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/__init__.py to __init__.pyc
+creating stub loader for _webiopi/GPIO.so
+byte-compiling build/bdist.linux-i686/egg/_webiopi/GPIO.py to GPIO.pyc
+creating build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/PKG-INFO -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/SOURCES.txt -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/dependency_links.txt -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/pbr.json -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/top_level.txt -> build/bdist.linux-i686/egg/EGG-INFO
+writing build/bdist.linux-i686/egg/EGG-INFO/native_libs.txt
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist/WebIOPi-0.7.1-py2.7-linux-i686.egg' and adding 'build/bdist.linux-i686/egg' to it
+removing 'build/bdist.linux-i686/egg' (and everything under it)
+Processing WebIOPi-0.7.1-py2.7-linux-i686.egg
+Removing /usr/local/lib/python2.7/dist-packages/WebIOPi-0.7.1-py2.7-linux-i686.egg
+Copying WebIOPi-0.7.1-py2.7-linux-i686.egg to /usr/local/lib/python2.7/dist-packages
+WebIOPi 0.7.1 is already the active version in easy-install.pth
+
+Installed /usr/local/lib/python2.7/dist-packages/WebIOPi-0.7.1-py2.7-linux-i686.egg
+Processing dependencies for WebIOPi==0.7.1
+Finished processing dependencies for WebIOPi==0.7.1
+WebIOPi installed for Python 2.7.14
+
+Found Python 3.6.3... 
+Trying to install python3-dev using apt-get
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-dev is already the newest version (3.6.3-0ubuntu2).
+python3-dev set to manually installed.
+python3-setuptools is already the newest version (36.2.7-2).
+python3-setuptools set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Trying to install WebIOPi for Python 3.6.3
+running install
+running bdist_egg
+running egg_info
+writing WebIOPi.egg-info/PKG-INFO
+writing dependency_links to WebIOPi.egg-info/dependency_links.txt
+writing top-level names to WebIOPi.egg-info/top_level.txt
+reading manifest file 'WebIOPi.egg-info/SOURCES.txt'
+writing manifest file 'WebIOPi.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-i686/egg
+running install_lib
+running build_py
+creating build/lib.linux-i686-3.6
+creating build/lib.linux-i686-3.6/webiopi
+copying webiopi/__main__.py -> build/lib.linux-i686-3.6/webiopi
+copying webiopi/__init__.py -> build/lib.linux-i686-3.6/webiopi
+creating build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/version.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/thread.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/types.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/logger.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/crypto.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/config.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/loader.py -> build/lib.linux-i686-3.6/webiopi/utils
+copying webiopi/utils/__init__.py -> build/lib.linux-i686-3.6/webiopi/utils
+creating build/lib.linux-i686-3.6/webiopi/clients
+copying webiopi/clients/__init__.py -> build/lib.linux-i686-3.6/webiopi/clients
+creating build/lib.linux-i686-3.6/webiopi/protocols
+copying webiopi/protocols/rest.py -> build/lib.linux-i686-3.6/webiopi/protocols
+copying webiopi/protocols/http.py -> build/lib.linux-i686-3.6/webiopi/protocols
+copying webiopi/protocols/coap.py -> build/lib.linux-i686-3.6/webiopi/protocols
+copying webiopi/protocols/__init__.py -> build/lib.linux-i686-3.6/webiopi/protocols
+creating build/lib.linux-i686-3.6/webiopi/server
+copying webiopi/server/__init__.py -> build/lib.linux-i686-3.6/webiopi/server
+creating build/lib.linux-i686-3.6/webiopi/decorators
+copying webiopi/decorators/rest.py -> build/lib.linux-i686-3.6/webiopi/decorators
+copying webiopi/decorators/__init__.py -> build/lib.linux-i686-3.6/webiopi/decorators
+creating build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/bus.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/serial.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/onewire.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/spi.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/manager.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/instance.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/i2c.py -> build/lib.linux-i686-3.6/webiopi/devices
+copying webiopi/devices/__init__.py -> build/lib.linux-i686-3.6/webiopi/devices
+creating build/lib.linux-i686-3.6/webiopi/devices/digital
+copying webiopi/devices/digital/pcf8574.py -> build/lib.linux-i686-3.6/webiopi/devices/digital
+copying webiopi/devices/digital/ds2408.py -> build/lib.linux-i686-3.6/webiopi/devices/digital
+copying webiopi/devices/digital/mcp23XXX.py -> build/lib.linux-i686-3.6/webiopi/devices/digital
+copying webiopi/devices/digital/gpio.py -> build/lib.linux-i686-3.6/webiopi/devices/digital
+copying webiopi/devices/digital/__init__.py -> build/lib.linux-i686-3.6/webiopi/devices/digital
+creating build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/pcf8591.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/pca9685.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/mcp492X.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/mcp4725.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/mcp48XX.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/mcp3x0x.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/__init__.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+copying webiopi/devices/analog/ads1x1x.py -> build/lib.linux-i686-3.6/webiopi/devices/analog
+creating build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/tslXXXX.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/onewiretemp.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/hytXXX.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/tmpXXX.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/bmp085.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/vcnl4000.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+copying webiopi/devices/sensor/__init__.py -> build/lib.linux-i686-3.6/webiopi/devices/sensor
+creating build/lib.linux-i686-3.6/webiopi/devices/shield
+copying webiopi/devices/shield/piface.py -> build/lib.linux-i686-3.6/webiopi/devices/shield
+copying webiopi/devices/shield/__init__.py -> build/lib.linux-i686-3.6/webiopi/devices/shield
+running build_ext
+building '_webiopi.GPIO' extension
+creating build/temp.linux-i686-3.6
+creating build/temp.linux-i686-3.6/native
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fdebug-prefix-map=/build/python3.6-Ro5aVq/python3.6-3.6.3=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c native/bridge.c -o build/temp.linux-i686-3.6/native/bridge.o
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fdebug-prefix-map=/build/python3.6-Ro5aVq/python3.6-3.6.3=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c native/gpio.c -o build/temp.linux-i686-3.6/native/gpio.o
+i686-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -g -fdebug-prefix-map=/build/python3.6-Ro5aVq/python3.6-3.6.3=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c native/cpuinfo.c -o build/temp.linux-i686-3.6/native/cpuinfo.o
+native/cpuinfo.c: In function ‘get_cpuinfo_revision’:
+native/cpuinfo.c:38:7: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+       fgets(buffer, sizeof(buffer) , fp);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+creating build/lib.linux-i686-3.6/_webiopi
+i686-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -specs=/usr/share/dpkg/no-pie-link.specs -Wl,-z,relro -Wl,-Bsymbolic-functions -specs=/usr/share/dpkg/no-pie-link.specs -Wl,-z,relro -g -fdebug-prefix-map=/build/python3.6-Ro5aVq/python3.6-3.6.3=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-i686-3.6/native/bridge.o build/temp.linux-i686-3.6/native/gpio.o build/temp.linux-i686-3.6/native/cpuinfo.o -o build/lib.linux-i686-3.6/_webiopi/GPIO.cpython-36m-i386-linux-gnu.so
+creating build/bdist.linux-i686/egg
+creating build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-3.6/webiopi/protocols/rest.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-3.6/webiopi/protocols/http.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-3.6/webiopi/protocols/coap.py -> build/bdist.linux-i686/egg/webiopi/protocols
+copying build/lib.linux-i686-3.6/webiopi/protocols/__init__.py -> build/bdist.linux-i686/egg/webiopi/protocols
+creating build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-3.6/webiopi/devices/bus.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/pcf8591.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/pca9685.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/mcp492X.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/mcp4725.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/mcp48XX.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/mcp3x0x.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/analog/ads1x1x.py -> build/bdist.linux-i686/egg/webiopi/devices/analog
+copying build/lib.linux-i686-3.6/webiopi/devices/serial.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-3.6/webiopi/devices/onewire.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-3.6/webiopi/devices/spi.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-3.6/webiopi/devices/manager.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/tslXXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/onewiretemp.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/hytXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/tmpXXX.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/bmp085.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/vcnl4000.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/sensor/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/sensor
+copying build/lib.linux-i686-3.6/webiopi/devices/instance.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/digital/pcf8574.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/digital/ds2408.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/digital/mcp23XXX.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/digital/gpio.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/digital/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/digital
+copying build/lib.linux-i686-3.6/webiopi/devices/i2c.py -> build/bdist.linux-i686/egg/webiopi/devices
+creating build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-3.6/webiopi/devices/shield/piface.py -> build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-3.6/webiopi/devices/shield/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices/shield
+copying build/lib.linux-i686-3.6/webiopi/devices/__init__.py -> build/bdist.linux-i686/egg/webiopi/devices
+copying build/lib.linux-i686-3.6/webiopi/__main__.py -> build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/webiopi/clients
+copying build/lib.linux-i686-3.6/webiopi/clients/__init__.py -> build/bdist.linux-i686/egg/webiopi/clients
+creating build/bdist.linux-i686/egg/webiopi/decorators
+copying build/lib.linux-i686-3.6/webiopi/decorators/rest.py -> build/bdist.linux-i686/egg/webiopi/decorators
+copying build/lib.linux-i686-3.6/webiopi/decorators/__init__.py -> build/bdist.linux-i686/egg/webiopi/decorators
+creating build/bdist.linux-i686/egg/webiopi/server
+copying build/lib.linux-i686-3.6/webiopi/server/__init__.py -> build/bdist.linux-i686/egg/webiopi/server
+creating build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/version.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/thread.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/types.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/logger.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/crypto.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/config.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/loader.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/utils/__init__.py -> build/bdist.linux-i686/egg/webiopi/utils
+copying build/lib.linux-i686-3.6/webiopi/__init__.py -> build/bdist.linux-i686/egg/webiopi
+creating build/bdist.linux-i686/egg/_webiopi
+copying build/lib.linux-i686-3.6/_webiopi/GPIO.cpython-36m-i386-linux-gnu.so -> build/bdist.linux-i686/egg/_webiopi
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/rest.py to rest.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/http.py to http.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/coap.py to coap.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/protocols/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/bus.py to bus.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/pcf8591.py to pcf8591.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/pca9685.py to pca9685.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp492X.py to mcp492X.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp4725.py to mcp4725.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp48XX.py to mcp48XX.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/mcp3x0x.py to mcp3x0x.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/analog/ads1x1x.py to ads1x1x.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/serial.py to serial.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/onewire.py to onewire.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/spi.py to spi.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/manager.py to manager.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/tslXXXX.py to tslXXXX.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/onewiretemp.py to onewiretemp.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/hytXXX.py to hytXXX.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/tmpXXX.py to tmpXXX.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/bmp085.py to bmp085.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/vcnl4000.py to vcnl4000.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/sensor/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/instance.py to instance.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/pcf8574.py to pcf8574.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/ds2408.py to ds2408.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/mcp23XXX.py to mcp23XXX.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/gpio.py to gpio.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/digital/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/i2c.py to i2c.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/shield/piface.py to piface.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/shield/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/devices/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/__main__.py to __main__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/clients/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/decorators/rest.py to rest.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/decorators/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/server/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/version.py to version.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/thread.py to thread.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/types.py to types.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/logger.py to logger.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/crypto.py to crypto.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/config.py to config.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/loader.py to loader.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/utils/__init__.py to __init__.cpython-36.pyc
+byte-compiling build/bdist.linux-i686/egg/webiopi/__init__.py to __init__.cpython-36.pyc
+creating stub loader for _webiopi/GPIO.cpython-36m-i386-linux-gnu.so
+byte-compiling build/bdist.linux-i686/egg/_webiopi/GPIO.py to GPIO.cpython-36.pyc
+creating build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/PKG-INFO -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/SOURCES.txt -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/dependency_links.txt -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/pbr.json -> build/bdist.linux-i686/egg/EGG-INFO
+copying WebIOPi.egg-info/top_level.txt -> build/bdist.linux-i686/egg/EGG-INFO
+writing build/bdist.linux-i686/egg/EGG-INFO/native_libs.txt
+zip_safe flag not set; analyzing archive contents...
+_webiopi.__pycache__.GPIO.cpython-36: module references __file__
+creating 'dist/WebIOPi-0.7.1-py3.6-linux-i686.egg' and adding 'build/bdist.linux-i686/egg' to it
+removing 'build/bdist.linux-i686/egg' (and everything under it)
+Processing WebIOPi-0.7.1-py3.6-linux-i686.egg
+removing '/usr/local/lib/python3.6/dist-packages/WebIOPi-0.7.1-py3.6-linux-i686.egg' (and everything under it)
+creating /usr/local/lib/python3.6/dist-packages/WebIOPi-0.7.1-py3.6-linux-i686.egg
+Extracting WebIOPi-0.7.1-py3.6-linux-i686.egg to /usr/local/lib/python3.6/dist-packages
+WebIOPi 0.7.1 is already the active version in easy-install.pth
+
+Installed /usr/local/lib/python3.6/dist-packages/WebIOPi-0.7.1-py3.6-linux-i686.egg
+Processing dependencies for WebIOPi==0.7.1
+Finished processing dependencies for WebIOPi==0.7.1
+WebIOPi installed for Python 3.6.3
+
+Copying HTML resources...
+'htdocs/app/gpio-header/index.html' -> '/usr/share/webiopi/htdocs/app/gpio-header/index.html'
+'htdocs/app/gpio-list/index.html' -> '/usr/share/webiopi/htdocs/app/gpio-list/index.html'
+'htdocs/app/serial-monitor/index.html' -> '/usr/share/webiopi/htdocs/app/serial-monitor/index.html'
+'htdocs/app/devices-monitor/index.html' -> '/usr/share/webiopi/htdocs/app/devices-monitor/index.html'
+'htdocs/index.html' -> '/usr/share/webiopi/htdocs/index.html'
+'htdocs/webiopi.js' -> '/usr/share/webiopi/htdocs/webiopi.js'
+'htdocs/webiopi.css' -> '/usr/share/webiopi/htdocs/webiopi.css'
+'htdocs/jquery.js' -> '/usr/share/webiopi/htdocs/jquery.js'
+
+Installing startup script...
+Installing webiopi command...
+Installing webiopi-passwd command...
+
+Do you want to access WebIOPi over Internet ? [y/n]
+n
+
+WebIOPi successfully installed
+ * To start WebIOPi foreground	: sudo webiopi [-h] [-c config] [-l log] [-s script] [-d] [port]
+
+ * To start WebIOPi background	: sudo /etc/init.d/webiopi start
+ * To start WebIOPi at boot	: sudo update-rc.d webiopi defaults
+
+ * Run ./weaved-setup.bin to install the Weaved IoT Kit and access your device over Internet
+
+ * Look in /home/ejk/make/raspberry/WebIOPi-0.7.1/examples for Python library usage examples
+
+ ejk$
+ :end:
+  This is my second attempt at installing. I tried to get fancy at
+  first and modified the setup.sh script because I was afraid that
+  since I am not installing on a raspberry pi it might screw up my
+  laptop, but I am pretty sure it is safe---though it may not actually
+  work. I documented my first attempt [[file:~/notes/org/iot.org][here]].
+** config
+   The config file that comes with the distribution gets installed in
+   /etc/webiopi.
