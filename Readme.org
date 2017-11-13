@@ -1,1 +1,3 @@
 * Introduction
+  I have designed this project to work with the web internet of things
+  [[http://webiopi.trouch.com/][project]] that runs on the Raspberry Pi.
