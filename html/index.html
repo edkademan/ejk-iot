@@ -5,41 +5,16 @@
   <meta http-equiv = "Content-Type"
         content    = "text/html; charset=UTF-8">
   <title>WebIOPi | Light Control</title>
-  <script type="text/javascript" src="webiopi.js"></script>
+  <script type="text/javascript" src="foobar.js"></script>
   <script type="text/javascript">
-    webiopi().ready(function() {
-    // Create a "Light" labeled button for GPIO 17
-    var button = webiopi().createGPIOButton(17, "Light");
-
-    // Append button to HTML element with ID="controls" using jQuery
-    $("#controls").append(button);
-
-    // Refresh GPIO buttons
-    // pass true to refresh repeatedly of false to refresh once
-    webiopi().refreshGPIO(true);
-    });
+  // make foobar.js source jquery
+  // invoke a fcn from foobar.js
+  // alter the webpage with it
   </script>
-  <style type="text/css">
-    button {
-    display: block;
-    margin: 5px 5px 5px 5px;
-    width: 160px;
-    height: 45px;
-    font-size: 24pt;
-    font-weight: bold;
-    color: white;
-    }
-
-    #gpio17.LOW {
-    background-color: Black;
-    }
-
-    #gpio17.HIGH {
-    background-color: Blue;
-    }
-  </style>
 </head>
 <body>
+  Here is my webpage.
+  
   <div id="controls" align="center"></div>
 </body>
 </html>
