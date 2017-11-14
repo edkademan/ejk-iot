@@ -533,3 +533,7 @@ WebIOPi successfully installed
    (disable GPIO will fix? This didn't seem to make any
    difference). The main initializes Server and then does runLoop
    (from thread) that just sleeps.
+
+   - Modify __init__.py in the server module
+     maybe set self.restHandler.export to []? NativeGPIO initializes
+     exports (from webiopi.devices.digital.gpio)

@@ -23,7 +23,6 @@
 # name = sourcefile
 #   each sourcefile may have setup, loop and destroy functions and macros
 #myscript = /home/pi/webiopi/examples/scripts/macros/script.py
-#myscript = /home/ejk/make/raspberry/ejk-iot/python/script.py
 
 #------------------------------------------------------------------------#
 
@@ -41,7 +40,6 @@ prompt = "WebIOPi"
 
 # Use doc-root to change default HTML and resource files location
 #doc-root = /home/pi/webiopi/examples/scripts/macros
-doc-root = /home/ejk/make/raspberry/ejk-iot/html
 
 # Use welcome-file to change the default "Welcome" file
 #welcome-file = index.html
