@@ -518,3 +518,18 @@ WebIOPi successfully installed
 ** config
    The config file that comes with the distribution gets installed in
    /etc/webiopi.
+** running
+   - I can start the webserver with
+       sudo webiopi -d -c ~/make/raspberry/ejk-iot/config
+   - By default the server may be trying to serve up the index.html
+     file in
+       /home/ejk/make/raspberry/WebIOPi-0.7.1/examples/scripts/macros
+** disable hw
+   The webiopi command executes this
+     python3 -m webiopi $*
+   and this references the code in
+     /usr/local/lib/python3.6/dist-packages/WebIOPi-0.7.1-py3.6-linux-i686.egg/webiopi
+   containing __init__.py and __main__.py The init imports stuff
+   (disable GPIO will fix? This didn't seem to make any
+   difference). The main initializes Server and then does runLoop
+   (from thread) that just sleeps.
