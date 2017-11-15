@@ -537,3 +537,13 @@ WebIOPi successfully installed
    - Modify __init__.py in the server module
      maybe set self.restHandler.export to []? NativeGPIO initializes
      exports (from webiopi.devices.digital.gpio)
+* manage jquery/js
+  The js in the example index.html calls webiopi() which ultimately
+  makes a WebIOPi object. This object makes a script element that
+  loads jquery that on "onload" calls the WebIOPi init method. The
+  init method invokes readyCallback, a method of the WebIOPi class.
+  - webiopi().ready(function() {...});
+    All the javascript goes in the thunk which is the argument to
+    ready. The thunk has access to jquery and makes jquery calls.
+  - The ready method takes the thunk and assigns it to
+    readyCallback.
