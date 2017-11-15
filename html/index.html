@@ -10,6 +10,8 @@
     var f = new Foobar();
     f.run_on_ready(function() {
     $("#controls").text("this is from jquery");
+    var b = f.createGPIOButton(17, "Light");
+    $("#controls").append(b);
     alert("success!");});
   </script>
 </head>
