@@ -22,5 +22,8 @@ function Foobar() {
   Foobar.prototype.createGPIOButton = function(gpio, label) {
     var k = (function(event) {this.toggleValue(gpio);}).bind(this);
     return this.createButton("gpio" + gpio, label, k);}
-  Foobar.prototype.toggleValue = function(x) {};
+  Foobar.prototype.toggleValue = function(gpio) {
+    var b = $("#gpio" + gpio);
+    var c = (b.attr("class") == "LOW" ? "HIGH" : "LOW");
+    b.attr("class", c);};
 }

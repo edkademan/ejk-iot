@@ -9,12 +9,26 @@
   <script type="text/javascript">
     var f = new Foobar();
     f.run_on_ready(function() {
-    $("#controls").text("this is from jquery");
-    var b = f.createGPIOButton(17, "Light");
-    $("#controls").append(b);
-    alert("success!");});
+      $("#controls").text("this is from jquery: ");
+      $("#controls").append(f.createGPIOButton(17, "Light"));
+      $("#controls").append(f.createGPIOButton(18, "TV"));});
   </script>
+
+  <style type="text/css">
+    button {
+      display:     block;
+      margin:      5px 5px 5px 5px;
+      width:       160px;
+      height:      45px;
+      font-size:   24pt;
+      font-weight: bold;
+      color:       white;
+      background-color: Gray;}
+    .LOW  {background-color: Black;}
+    .HIGH {background-color: Blue;}
+  </style>
 </head>
+
 <body>
   Here is my webpage.
   
