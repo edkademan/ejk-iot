@@ -1,3 +1,62 @@
 * Introduction
   I have designed this project to work with the web internet of things
-  [[http://webiopi.trouch.com/][project]] that runs on the Raspberry Pi.
+  [[http://webiopi.trouch.com/][webiopi]] that runs on the Raspberry Pi. Once you have installed
+  it---my project---you can access it with a web browser as described
+  below.
+
+  This is a preliminary non-working version. Right now the code
+  simply implements a user-facing display and does not actually
+  control any hardware. In fact you don't have to have the webiopi
+  system installed at all.
+
+* Installation
+  1. Make sure the Raspberry Pi is connected to the internet and
+     running the apache server. Log in. You do not have to be root.
+  2. Your default working directory is now /home/pi. (You can verify by
+     typing "pwd".)
+  3. Now type
+       git clone https://github.com/edkademan/ejk-iot.git
+     This will create the directory
+       /home/pi/ejk-iot
+  4. Execute the command
+       sudo ln -s /home/pi/ejk-iot/html /var/www/html/ejk
+     If this step or step 5 don't work see below.
+  5. From a web browser running on the Pi you can go to the location
+       localhost/ejk
+     Assuming that 192.168.1.10 is the IP address of the Pi then from
+     some other machine on your local network you can go to
+       192.168.1.10/ejk
+
+  It is not necessary that the system be rooted at /home/pi but if you
+  make it some other directory you have to replace "/home/pi" in the
+  above instructions with that directory. I don't see any downside to
+  putting it directly in /home/pi.
+
+  Step 4 simply creates a symbolic link that makes it possible for the
+  apache server to find the page you just installed. It is possible
+  that apache is configured in such a way that /var/www/html is not
+  the default directory for serving up pages or that it doesn't follow
+  symlinks. In that case step 5 will fail. Let me know and I will
+  figure out how to fix this.
+
+* Operation
+  The page is just a demonstration that consists of a map with active
+  elements---in ellipses---overlayed. Mouse over an element to get
+  more information on it and click it to toggle. The file
+  ejk-iot/html/index.html specifies the data structure that creates
+  the page and the file ejk-iot/html/active-image.js contains a
+  comment right at the beginning that spells out what the data
+  structure means. I hope it's all relatively straightforward.
+
+  I may make changes to the project in the future. You will be able to
+  download the latest version if you do the following:
+    - cd /home/pi/ejk-iot
+    - git pull
+  If you had modified any of the files in that ejk-iot directory in
+  the meantime this will complicate things. The git program that
+  manages version control is powerful and can handle this but it is
+  also confusing and you may not want to bother learning it in any
+  great detail right now. It should be safe if you simply create your
+  own files. For example, instead of modifying the index.html file
+  create a myindex.html file and access it from the browser with
+    localhost/ejk/myindex.html
