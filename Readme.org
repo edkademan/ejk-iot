@@ -15,17 +15,17 @@
   2. Your default working directory is now /home/pi. (You can verify by
      typing "pwd".)
   3. Now type
-       git clone https://github.com/edkademan/ejk-iot.git
+       - git clone https://github.com/edkademan/ejk-iot.git
      This will create the directory
-       /home/pi/ejk-iot
+       - /home/pi/ejk-iot
   4. Execute the command
-       sudo ln -s /home/pi/ejk-iot/html /var/www/html/rpi
+       - sudo ln -s /home/pi/ejk-iot/html /var/www/html/rpi
      (If this step or step 5 don't work see below.)
   5. From a web browser running on the Pi you can go to the location
-       localhost/rpi
+       - localhost/rpi
      Assuming that 192.168.1.10 is the IP address of the Pi then from
      some other machine on your local network you can go to
-       192.168.1.10/rpi
+       - 192.168.1.10/rpi
 
   It is not necessary that the system be rooted at /home/pi but if you
   make it some other directory you have to replace "/home/pi" in the
