@@ -1,0 +1,28 @@
+<!-- * header info -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Active SVG Image</title>
+  <script src = "active-image.js"></script>
+  <script>
+    var a = new Active_Image({
+      mapfile:    "house.png",
+      map_width:  400,
+      map_height: 700,
+      p: [
+        {x: 100, y: 500, label: "Label 1", tip: "here is a tip"},
+        {x: 300, y: 700, label: "Label 2", tip: "here is tip 2"},
+        {x: 800, y: 200, label: "Label 3", tip: "and tip 3"},
+      ]});
+
+    a.run_on_ready();
+  </script>
+</head>
+<!-- * body -->
+<body>
+<!-- * the end -->
+</body>
+</html>
+
+
