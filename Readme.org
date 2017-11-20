@@ -1,8 +1,8 @@
 * Introduction
-  I have designed this project to work with the web internet of things
-  [[http://webiopi.trouch.com/][webiopi]] that runs on the Raspberry Pi. Once you have installed
-  it---my project---you can access it with a web browser as described
-  below.
+  I have designed this project to work with the webiopi
+  [[http://webiopi.trouch.com/][internet-of-things]] that runs on the Raspberry Pi. Once you have
+  installed it---my project---you can access it with a web browser as
+  described below.
 
   This is a preliminary non-working version. Right now the code
   simply implements a user-facing display and does not actually
@@ -19,13 +19,13 @@
      This will create the directory
        /home/pi/ejk-iot
   4. Execute the command
-       sudo ln -s /home/pi/ejk-iot/html /var/www/html/ejk
-     If this step or step 5 don't work see below.
+       sudo ln -s /home/pi/ejk-iot/html /var/www/html/rpi
+     (If this step or step 5 don't work see below.)
   5. From a web browser running on the Pi you can go to the location
-       localhost/ejk
+       localhost/rpi
      Assuming that 192.168.1.10 is the IP address of the Pi then from
      some other machine on your local network you can go to
-       192.168.1.10/ejk
+       192.168.1.10/rpi
 
   It is not necessary that the system be rooted at /home/pi but if you
   make it some other directory you have to replace "/home/pi" in the
@@ -36,20 +36,21 @@
   apache server to find the page you just installed. It is possible
   that apache is configured in such a way that /var/www/html is not
   the default directory for serving up pages or that it doesn't follow
-  symlinks. In that case step 5 will fail. Let me know and I will
-  figure out how to fix this.
+  symlinks. In that case step 5 will fail. If that happens let me know
+  and I will figure out how to fix it.
 
 * Operation
   The page is just a demonstration that consists of a map with active
   elements---in ellipses---overlayed. Mouse over an element to get
   more information on it and click it to toggle. The file
-  ejk-iot/html/index.html specifies the data structure that creates
-  the page and the file ejk-iot/html/active-image.js contains a
-  comment right at the beginning that spells out what the data
-  structure means. I hope it's all relatively straightforward.
+  ejk-iot/html/index.html defines the data structure that creates the
+  page and the file ejk-iot/html/active-image.js contains a comment
+  right at the beginning that spells out what the data structure
+  means. I hope it's all relatively straightforward.
 
   I may make changes to the project in the future. You will be able to
-  download the latest version if you do the following:
+  automatically update your local directory to reflect the changes if
+  you do the following:
     - cd /home/pi/ejk-iot
     - git pull
   If you had modified any of the files in that ejk-iot directory in
@@ -59,4 +60,4 @@
   great detail right now. It should be safe if you simply create your
   own files. For example, instead of modifying the index.html file
   create a myindex.html file and access it from the browser with
-    localhost/ejk/myindex.html
+    localhost/rpi/myindex.html
