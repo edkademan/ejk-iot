@@ -1,13 +1,9 @@
 * Introduction
   I have designed this project to work with the webiopi
-  [[http://webiopi.trouch.com/][internet-of-things]] that runs on the Raspberry Pi. Once you have
-  installed it---my project---you can access it with a web browser as
-  described below.
-
-  This is a preliminary non-working version. Right now the code
-  simply implements a user-facing display and does not actually
-  control any hardware. In fact you don't have to have the webiopi
-  system installed at all.
+  [[http://webiopi.trouch.com/][internet-of-things]] that runs on the Raspberry Pi. Right now it is a
+  preliminary version that just implements a user-facing display and
+  does not actually control any hardware. In fact you don't have to
+  have the webiopi system installed at all.
 
 * Installation
   1. Make sure the Raspberry Pi is connected to the internet and
@@ -34,10 +30,10 @@
 
   Step 4 simply creates a symbolic link that makes it possible for the
   apache server to find the page you just installed. It is possible
-  that apache is configured in such a way that /var/www/html is not
-  the default directory for serving up pages or that it doesn't follow
-  symlinks. In that case step 5 will fail. If that happens let me know
-  and I will figure out how to fix it.
+  that apache is configured in such a way that it doesn't follow
+  symlinks or that /var/www/html is not the default directory for
+  serving up pages. In that case step 5 will fail. If that happens let
+  me know and I will figure out how to fix it.
 
 * Operation
   The page is just a demonstration that consists of a map with active
