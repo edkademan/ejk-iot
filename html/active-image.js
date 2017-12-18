@@ -37,7 +37,8 @@ characters long.
 
 function Active_Image(m) {
 
-  this.m = m || {};
+  m      = m || {};
+  this.m = m;
   this.label_size = 14;
 
   // Convert user coordinates to actual.
@@ -47,9 +48,9 @@ function Active_Image(m) {
       m.p[i].y = Math.round(m.map_height * (1 - m.p[i].y/1000));}
 
   Active_Image.prototype.load_jquery = function() {
-    var j    = document.createElement("script");
-    j.type   = "text/javascript";
-    j.src    = "jquery-3.2.1.min.js";
+    var j  = document.createElement("script");
+    j.type = "text/javascript";
+    j.src  = "jquery-3.2.1.min.js";
     document.getElementsByTagName("head")[0].appendChild(j);
     return j;};
   
@@ -60,7 +61,7 @@ function Active_Image(m) {
 
   Active_Image.prototype.build_image_map = function() {
     this.map();
-    this.svg();}
+    this.svg();};
   
   Active_Image.prototype.svg = function() {
     var m  = this.m;
@@ -82,8 +83,8 @@ function Active_Image(m) {
     var m = this.m;
     var s = this.svg_elt("svg");
     s.css({"background-image" : ("url('" + m.mapfile + "')"),
-              "background-size" : (m.map_width  + "px " +
-                                   m.map_height + "px")}).
+           "background-size" : (m.map_width  + "px " +
+                                m.map_height + "px")}).
       attr({"width"  : (m.map_width  + "px"),
             "height" : (m.map_height + "px")});
     for(var i = 0; i < m.p.length; i++) s.append(this.point(i));
@@ -126,5 +127,4 @@ function Active_Image(m) {
     $(elt).attr("state", s);
     $(elt).css("fill", c);
     $(elt).css("stroke", c);};
-  
 }
